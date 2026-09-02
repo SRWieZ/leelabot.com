@@ -69,7 +69,7 @@
                     </div>
 
                     {{-- A slice of what the bot looks like in game. --}}
-                    <div class="overflow-hidden rounded-xl border border-zinc-200 bg-zinc-900 shadow-xl dark:border-zinc-800">
+                    <div class="min-w-0 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-900 shadow-xl dark:border-zinc-800">
                         <div class="flex items-center gap-1.5 border-b border-zinc-800 px-4 py-3">
                             <span class="size-2.5 rounded-full bg-zinc-700"></span>
                             <span class="size-2.5 rounded-full bg-zinc-700"></span>
@@ -163,7 +163,7 @@
                         </dl>
                     </div>
 
-                    <div class="overflow-x-auto rounded-xl border border-zinc-200 bg-zinc-900 p-5 font-mono text-[13px]/relaxed text-zinc-300 shadow-sm dark:border-zinc-800">
+                    <div class="min-w-0 overflow-x-auto rounded-xl border border-zinc-200 bg-zinc-900 p-5 font-mono text-[13px]/relaxed text-zinc-300 shadow-sm dark:border-zinc-800">
                         <p class="whitespace-nowrap"><span class="text-zinc-600">$</span> git clone {{ config('leelabot.repository') }}.git</p>
                         <p class="whitespace-nowrap"><span class="text-zinc-600">$</span> cd Leelabot</p>
                         <p class="mt-3 whitespace-nowrap text-zinc-500"># edit the config, then:</p>
