@@ -20,11 +20,8 @@
     </head>
 
     <body class="relative min-h-screen bg-plum-950 font-sans text-plum-400 antialiased">
-        {{-- Backdrop: blue bleeding in from the left, red from the right. --}}
-        <div class="team-wash pointer-events-none fixed inset-0 -z-20"></div>
+        {{-- Backdrop is just the field grid; the team colours live in the HUD. --}}
         <div class="field-grid pointer-events-none fixed inset-0 -z-20"></div>
-        <div class="pointer-events-none fixed inset-y-0 left-0 -z-10 w-px bg-gradient-to-b from-transparent via-team-blue/40 to-transparent"></div>
-        <div class="pointer-events-none fixed inset-y-0 right-0 -z-10 w-px bg-gradient-to-b from-transparent via-team-red/40 to-transparent"></div>
 
         <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-orchid-600 focus:px-4 focus:py-2 focus:text-white">
             Skip to content
@@ -100,8 +97,8 @@
                             </div>
                         </div>
 
-                        {{-- Scoreboard, top right, built like the in-game one. --}}
-                        <div class="order-1 lg:order-2">
+                        {{-- Scoreboard, low on the right, built like the in-game one. --}}
+                        <div class="order-1 lg:order-2 lg:self-end">
                             <div class="flex flex-col gap-2 overflow-hidden rounded-md border border-white/20 bg-black/40 p-1">
                                 <x-team-panel side="blue" :players="$board['blue']" />
                                 <x-team-panel side="red" :players="$board['red']" />
@@ -124,10 +121,10 @@
 
                     <div class="mt-14 grid items-stretch gap-4 lg:grid-cols-[minmax(0,1fr)_5rem_minmax(0,1.25fr)_5rem_minmax(0,1fr)] lg:gap-0">
                         {{-- Reads --}}
-                        <div class="flex flex-col rounded-xl border border-white/10 bg-white/3 p-5">
+                        <div class="flex flex-col rounded-xl border border-white/10 bg-plum-900 p-5">
                             <p class="font-mono text-xs tracking-widest uppercase text-orchid-300">{{ $pipeline['reads']['title'] }}</p>
 
-                            <ul class="mt-5 flex flex-col gap-2.5">
+                            <ul class="my-auto flex flex-col gap-2.5 py-5">
                                 @foreach ($pipeline['reads']['nodes'] as $node)
                                     <li class="flex items-center gap-3 rounded-lg border border-white/10 bg-plum-900/60 px-3 py-2.5">
                                         <x-icon :name="$node['icon']" class="size-4 shrink-0 text-plum-400" />
@@ -137,13 +134,12 @@
                                 @endforeach
                             </ul>
 
-                            <p class="mt-5 text-sm/relaxed text-pretty text-plum-400">{{ $pipeline['reads']['caption'] }}</p>
                         </div>
 
                         <x-connector class="lg:px-4" />
 
                         {{-- Leelabot and its plugins --}}
-                        <div class="flex flex-col rounded-xl border border-orchid-400/25 bg-orchid-500/6 p-5">
+                        <div class="flex flex-col rounded-xl border border-orchid-400/30 bg-orchid-950 p-5">
                             <p class="font-mono text-xs tracking-widest uppercase text-orchid-300">{{ $pipeline['core']['title'] }}</p>
 
                             {{-- Plugins ring the core: half above, half below, dotted into it. --}}
@@ -170,16 +166,15 @@
                                 </ul>
                             </div>
 
-                            <p class="mt-5 text-sm/relaxed text-pretty text-plum-400">{{ $pipeline['core']['caption'] }}</p>
                         </div>
 
                         <x-connector class="lg:px-4" />
 
                         {{-- Answers --}}
-                        <div class="flex flex-col rounded-xl border border-white/10 bg-white/3 p-5">
+                        <div class="flex flex-col rounded-xl border border-white/10 bg-plum-900 p-5">
                             <p class="font-mono text-xs tracking-widest uppercase text-orchid-300">{{ $pipeline['speaks']['title'] }}</p>
 
-                            <ul class="mt-5 flex flex-col gap-2.5">
+                            <ul class="my-auto flex flex-col gap-2.5 py-5">
                                 @foreach ($pipeline['speaks']['nodes'] as $node)
                                     <li class="flex items-center gap-3 rounded-lg border border-white/10 bg-plum-900/60 px-3 py-2.5">
                                         <x-icon :name="$node['icon']" class="size-4 shrink-0 text-plum-400" />
@@ -189,7 +184,6 @@
                                 @endforeach
                             </ul>
 
-                            <p class="mt-5 text-sm/relaxed text-pretty text-plum-400">{{ $pipeline['speaks']['caption'] }}</p>
                         </div>
                     </div>
                 </div>

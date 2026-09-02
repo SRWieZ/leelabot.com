@@ -43,7 +43,7 @@ test('the pipeline diagram renders every stage', function () {
     $response = $this->get('/');
 
     foreach ([$pipeline['reads'], $pipeline['core'], $pipeline['speaks']] as $stage) {
-        $response->assertSee($stage['title'])->assertSee($stage['caption']);
+        $response->assertSee($stage['title']);
     }
 
     foreach ($pipeline['core']['plugins'] as $plugin) {

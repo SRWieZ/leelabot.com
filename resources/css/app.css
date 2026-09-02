@@ -25,17 +25,17 @@
     --color-orchid-950: oklch(0.235 0.058 316);
 
     /* Neutrals: only a trace of violet, so the page reads as slate not purple. */
-    --color-plum-100: oklch(0.945 0.004 318);
-    --color-plum-200: oklch(0.890 0.005 318);
-    --color-plum-300: oklch(0.815 0.006 318);
-    --color-plum-400: oklch(0.720 0.007 318);
-    --color-plum-500: oklch(0.625 0.008 318);
-    --color-plum-600: oklch(0.530 0.009 318);
-    --color-plum-700: oklch(0.430 0.010 318);
-    --color-plum-800: oklch(0.345 0.010 318);
-    --color-plum-850: oklch(0.298 0.010 318);
-    --color-plum-900: oklch(0.262 0.009 318);
-    --color-plum-950: oklch(0.218 0.008 318);
+    --color-plum-100: oklch(0.945 0 0);
+    --color-plum-200: oklch(0.890 0 0);
+    --color-plum-300: oklch(0.815 0 0);
+    --color-plum-400: oklch(0.720 0 0);
+    --color-plum-500: oklch(0.625 0 0);
+    --color-plum-600: oklch(0.530 0 0);
+    --color-plum-700: oklch(0.430 0 0);
+    --color-plum-800: oklch(0.345 0 0);
+    --color-plum-850: oklch(0.298 0 0);
+    --color-plum-900: oklch(0.262 0 0);
+    --color-plum-950: oklch(0.218 0 0);
 
     /*
      * Sampled straight out of the game's HUD: the scoreboard row fills and the
@@ -72,19 +72,35 @@
     mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 92%);
 }
 
-/* Blue bleeding in from the left, red from the right, orchid pooled between. */
-@utility team-wash {
-    background-image:
-        radial-gradient(ellipse 45% 40% at 0% 8%, color-mix(in oklab, var(--color-team-blue) 16%, transparent), transparent 70%),
-        radial-gradient(ellipse 45% 40% at 100% 8%, color-mix(in oklab, var(--color-team-red) 16%, transparent), transparent 70%),
-        radial-gradient(ellipse 55% 35% at 50% 0%, color-mix(in oklab, var(--color-orchid-500) 13%, transparent), transparent 72%);
-}
 
 /* Dotted rules for the pipeline diagram, so the dashes stay even at any width. */
 @utility dot-rule-x {
     background-image: repeating-linear-gradient(to right, currentColor 0 3px, transparent 3px 8px);
+    background-size: 8px 100%;
+    animation: dot-march-x 900ms linear infinite;
 }
 
 @utility dot-rule-y {
     background-image: repeating-linear-gradient(to bottom, currentColor 0 3px, transparent 3px 8px);
+    background-size: 100% 8px;
+    animation: dot-march-y 900ms linear infinite;
+}
+
+@keyframes dot-march-x {
+    to {
+        background-position: 8px 0;
+    }
+}
+
+@keyframes dot-march-y {
+    to {
+        background-position: 0 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dot-rule-x,
+    .dot-rule-y {
+        animation: none;
+    }
 }

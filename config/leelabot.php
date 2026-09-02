@@ -24,7 +24,6 @@ return [
     'pipeline' => [
         'reads' => [
             'title' => 'Reads',
-            'caption' => 'One games.log per server. Leelabot follows them all at once and turns every line into an event.',
             'nodes' => [
                 ['icon' => 'file', 'label' => 'games.log', 'meta' => 'server 1'],
                 ['icon' => 'file', 'label' => 'games.log', 'meta' => 'server 2'],
@@ -34,13 +33,11 @@ return [
 
         'core' => [
             'title' => 'Dispatches',
-            'caption' => 'The core parses the server and fires events. Every feature is a plugin listening for the ones it cares about.',
             'plugins' => ['adminbase', 'basicrights', 'stats', 'bans', 'warns', 'logs'],
         ],
 
         'speaks' => [
             'title' => 'Answers',
-            'caption' => 'Replies go back to the players over RCon, and out to the channels your admins are already sitting in.',
             'nodes' => [
                 ['icon' => 'prompt', 'label' => 'RCon', 'meta' => 'back into the game'],
                 ['icon' => 'relay', 'label' => 'IRC', 'meta' => 'your channel'],
