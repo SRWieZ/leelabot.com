@@ -25,8 +25,8 @@ test('the homepage shows both teams and the bot between them', function () {
 
     $response = $this->get('/');
 
-    $response->assertSee('Blue team')
-        ->assertSee('Red team')
+    $response->assertSee('Blue')
+        ->assertSee('Red')
         ->assertSee($board['map']);
 
     foreach ([...$board['blue'], ...$board['red']] as $player) {
@@ -34,12 +34,42 @@ test('the homepage shows both teams and the bot between them', function () {
     }
 });
 
-test('every feature icon exists in the icon component', function () {
+test('the pipeline diagram renders every stage', function () {
+    $pipeline = config('leelabot.pipeline');
+
+    $response = $this->get('/');
+
+    foreach ([$pipeline['reads'], $pipeline['core'], $pipeline['speaks']] as $stage) {
+        $response->assertSee($stage['title'])->assertSee($stage['caption']);
+    }
+
+    foreach ($pipeline['core']['plugins'] as $plugin) {
+        $response->assertSee($plugin);
+    }
+
+    foreach ([...$pipeline['reads']['nodes'], ...$pipeline['speaks']['nodes']] as $node) {
+        $response->assertSee($node['label']);
+    }
+});
+
+test('every command carries a tooltip describing it', function () {
+    $response = $this->get('/');
+
+    foreach (config('leelabot.commands') as $index => $command) {
+        $response->assertSee($command['name'])
+            ->assertSee($command['help'])
+            ->assertSee('command-'.$index);
+    }
+});
+
+test('every pipeline icon exists in the icon component', function () {
+    $pipeline = config('leelabot.pipeline');
+
     $available = collect(explode('@case(', file_get_contents(resource_path('views/components/icon.blade.php'))))
         ->skip(1)
         ->map(fn (string $chunk) => trim(explode(')', $chunk)[0], "'\""));
 
-    foreach (config('leelabot.features') as $feature) {
-        expect($available)->toContain($feature['icon']);
+    foreach ([...$pipeline['reads']['nodes'], ...$pipeline['speaks']['nodes']] as $node) {
+        expect($available)->toContain($node['icon']);
     }
 });

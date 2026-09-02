@@ -7,7 +7,7 @@
         <title>Leelabot — an administration bot for Urban Terror</title>
         <meta name="description" content="Leelabot runs your Urban Terror servers: RCon from the chat box, automatic warns and bans, player stats, and an IRC bridge. Free software, written in PHP.">
         <link rel="canonical" href="{{ url('/') }}">
-        <meta name="theme-color" content="#191320">
+        <meta name="theme-color" content="#2b2830">
 
         <meta property="og:type" content="website">
         <meta property="og:title" content="Leelabot — an administration bot for Urban Terror">
@@ -20,7 +20,7 @@
     </head>
 
     <body class="relative min-h-screen bg-plum-950 font-sans text-plum-400 antialiased">
-        {{-- Backdrop: blue on the left, red on the right, orchid pooled in the middle. --}}
+        {{-- Backdrop: blue bleeding in from the left, red from the right. --}}
         <div class="team-wash pointer-events-none fixed inset-0 -z-20"></div>
         <div class="field-grid pointer-events-none fixed inset-0 -z-20"></div>
         <div class="pointer-events-none fixed inset-y-0 left-0 -z-10 w-px bg-gradient-to-b from-transparent via-team-blue/40 to-transparent"></div>
@@ -30,15 +30,14 @@
             Skip to content
         </a>
 
-        <header class="sticky top-0 z-40 border-b border-white/5 bg-plum-950/70 backdrop-blur-md">
-            <div class="mx-auto flex max-w-6xl items-center gap-6 px-6 py-4">
-                <a href="/" class="flex items-center gap-2.5 font-semibold tracking-tight text-white">
-                    <x-mark class="size-7 text-orchid-400" />
-                    Leelabot
+        <header class="relative z-30">
+            <div class="mx-auto flex max-w-6xl items-center gap-6 px-6 py-6">
+                <a href="/" class="shrink-0">
+                    <img src="/leelabot-logo.png" alt="Leelabot" width="92" height="48" class="h-9 w-auto">
                 </a>
 
                 <nav class="ml-auto flex items-center gap-6 text-sm">
-                    <a href="#features" class="hidden text-plum-400 transition-colors hover:text-orchid-300 sm:block">Features</a>
+                    <a href="#how" class="hidden text-plum-400 transition-colors hover:text-orchid-300 sm:block">How it works</a>
                     <a href="#plugins" class="hidden text-plum-400 transition-colors hover:text-orchid-300 sm:block">Plugins</a>
                     <a href="#install" class="hidden text-plum-400 transition-colors hover:text-orchid-300 sm:block">Install</a>
                     <a href="{{ config('leelabot.repository') }}" class="font-medium text-plum-100 transition-colors hover:text-orchid-300">GitHub&nbsp;&rarr;</a>
@@ -48,8 +47,8 @@
 
         <main id="content">
             {{-- Hero --}}
-            <section class="mx-auto flex max-w-3xl flex-col items-center gap-7 px-6 pt-20 pb-16 text-center lg:pt-28">
-                <span class="inline-flex items-center gap-2 rounded-full border border-orchid-500/30 bg-orchid-500/10 px-3.5 py-1 font-mono text-xs text-orchid-200">
+            <section class="mx-auto flex max-w-3xl flex-col items-center gap-7 px-6 pt-14 pb-14 text-center lg:pt-20">
+                <span class="inline-flex items-center gap-2 rounded-full border border-orchid-400/30 bg-orchid-500/10 px-3.5 py-1 font-mono text-xs text-orchid-200">
                     Urban Terror &middot; PHP &middot; GPL-2.0+
                 </span>
 
@@ -57,89 +56,146 @@
                     Run your Urban Terror servers from the chat box.
                 </h1>
 
-                <p class="max-w-xl text-lg/relaxed text-pretty text-plum-400">
+                <p class="max-w-xl text-lg/relaxed text-pretty text-plum-300">
                     Leelabot sits between the two teams and your RCon. It answers admin commands typed
                     in game, hands out warns and bans on its own, and keeps the stats.
                 </p>
 
                 <div class="flex flex-wrap items-center justify-center gap-3">
-                    <a href="#install" class="rounded-lg bg-orchid-600 px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-orchid-950/50 transition-colors hover:bg-orchid-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400">
+                    <a href="#install" class="rounded-lg bg-orchid-600 px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-black/40 transition-colors hover:bg-orchid-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400">
                         Get started
                     </a>
-                    <a href="{{ config('leelabot.repository') }}" class="rounded-lg border border-white/12 bg-white/4 px-5 py-2.5 text-sm font-medium text-plum-100 transition-colors hover:border-white/25 hover:bg-white/8">
+                    <a href="{{ config('leelabot.repository') }}" class="rounded-lg border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-medium text-plum-100 transition-colors hover:border-white/30 hover:bg-white/10">
                         Source on GitHub
                     </a>
                 </div>
             </section>
 
-            {{-- The showpiece: both sides of the server, with the bot in the middle. --}}
+            {{-- The bot as it appears in game: chat down the left, score to the right. --}}
             @php($board = config('leelabot.scoreboard'))
             <section class="mx-auto max-w-6xl px-6 pb-24">
-                <div class="overflow-hidden rounded-2xl border border-white/8 bg-plum-900/50 shadow-2xl shadow-black/50 backdrop-blur-sm">
-                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-white/8 px-5 py-3 font-mono text-xs text-plum-500">
-                        <span class="text-plum-300">{{ $board['map'] }}</span>
-                        <span aria-hidden="true">&middot;</span>
-                        <span>{{ $board['gametype'] }}</span>
-                        <span aria-hidden="true">&middot;</span>
-                        <span>{{ count($board['blue']) + count($board['red']) }} players</span>
-                    </div>
+                <div class="relative isolate overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/60">
+                    <img src="/ut4-backdrop.jpg" alt="" aria-hidden="true" class="absolute inset-0 -z-10 size-full object-cover">
+                    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-plum-950/95 via-plum-950/55 to-plum-950/90"></div>
+                    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-plum-950 via-transparent to-plum-950/40"></div>
 
-                    <div class="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)_minmax(0,1fr)]">
-                        <x-team-panel side="blue" :players="$board['blue']" />
-
-                        {{-- Leelabot, centre stage. --}}
-                        <div class="relative isolate flex flex-col gap-5 border-y border-white/8 bg-orchid-950/40 p-5 sm:p-6 lg:border-x lg:border-y-0">
-                            <div class="bot-glow pointer-events-none absolute inset-x-0 top-0 -z-10 h-40"></div>
-
-                            <div class="flex flex-col items-center gap-2 pt-1">
-                                <span class="grid size-14 place-items-center rounded-2xl border border-orchid-400/25 bg-orchid-500/12 text-orchid-300 shadow-lg shadow-orchid-950/60">
-                                    <x-mark class="size-8" />
-                                </span>
-                                <span class="font-semibold tracking-tight text-white">Leelabot</span>
-                                <span class="font-mono text-[11px] tracking-widest uppercase text-orchid-300/70">refereeing</span>
-                            </div>
-
-                            {{-- Lines wrap against the timestamp gutter rather than scrolling out of view. --}}
-                            <div class="min-w-0 rounded-lg border border-white/8 bg-plum-950/60 p-3.5">
-                                <div class="flex flex-col gap-2 font-mono text-[13px]/relaxed">
-                                    @foreach ($board['feed'] as $line)
-                                        @php($speaker = match ($line['team']) {
-                                            'blue' => 'text-team-blue-bright',
-                                            'red' => 'text-team-red-bright',
-                                            default => 'text-orchid-300',
-                                        })
-                                        <p class="flex gap-2">
-                                            <span class="shrink-0 text-plum-500">{{ $line['time'] }}</span>
-                                            <span class="min-w-0 break-words">
-                                                <span class="{{ $speaker }}">{{ $line['who'] }}:</span>
-                                                <span class="{{ $line['team'] === 'bot' ? 'text-plum-300' : 'text-plum-100' }}">{{ $line['text'] }}</span>
-                                            </span>
-                                        </p>
-                                    @endforeach
-                                </div>
+                    <div class="grid min-h-[23rem] gap-8 p-5 sm:p-7 lg:grid-cols-[minmax(0,1fr)_19rem] lg:gap-10">
+                        {{-- Chat, sitting low like it does in game. --}}
+                        <div class="order-2 flex flex-col justify-end lg:order-1">
+                            <div class="flex flex-col gap-1.5 font-mono text-[13px]/relaxed [text-shadow:0_1px_3px_rgb(0_0_0/0.95)]">
+                                @foreach ($board['feed'] as $line)
+                                    @php($speaker = match ($line['team']) {
+                                        'blue' => 'text-team-blue-bright',
+                                        'red' => 'text-team-red-bright',
+                                        default => 'text-orchid-300',
+                                    })
+                                    <p class="flex gap-2">
+                                        <span class="shrink-0 text-plum-400">{{ $line['time'] }}</span>
+                                        <span class="min-w-0 break-words">
+                                            <span class="{{ $speaker }}">{{ $line['who'] }}:</span>
+                                            <span class="{{ $line['team'] === 'bot' ? 'text-plum-100' : 'text-white' }}">{{ $line['text'] }}</span>
+                                        </span>
+                                    </p>
+                                @endforeach
                             </div>
                         </div>
 
-                        <x-team-panel side="red" :players="$board['red']" />
+                        {{-- Scoreboard, top right. --}}
+                        <div class="order-1 lg:order-2">
+                            <div class="rounded-xl border border-white/10 bg-black/55 p-4 backdrop-blur-sm">
+                                <div class="flex items-baseline gap-2 border-b border-white/10 pb-3 font-mono text-xs">
+                                    <span class="text-white">{{ $board['map'] }}</span>
+                                    <span class="ml-auto text-plum-400">{{ $board['gametype'] }}</span>
+                                </div>
+
+                                <x-team-panel side="blue" :players="$board['blue']" class="pt-4" />
+                                <x-team-panel side="red" :players="$board['red']" class="mt-4 border-t border-white/10 pt-4" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {{-- Features --}}
-            <section id="features" class="border-t border-white/5 bg-plum-950/40">
+            {{-- What it does, as the pipeline it actually is. --}}
+            @php($pipeline = config('leelabot.pipeline'))
+            <section id="how" class="border-t border-white/5">
                 <div class="mx-auto max-w-6xl px-6 py-20">
                     <h2 class="text-2xl font-semibold tracking-tight text-white sm:text-3xl">What it does</h2>
+                    <p class="mt-4 max-w-2xl text-pretty text-plum-400">
+                        It never talks to the game directly. It follows the log files each server writes,
+                        hands what it finds to the plugins you loaded, and answers on whichever channel
+                        makes sense.
+                    </p>
 
-                    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                        @foreach (config('leelabot.features') as $feature)
-                            <div class="flex flex-col gap-3 rounded-xl border border-white/8 bg-white/3 p-5 transition-colors hover:border-orchid-500/30 hover:bg-orchid-500/5">
-                                <span class="grid size-10 place-items-center rounded-lg border border-orchid-400/20 bg-orchid-500/10 text-orchid-300">
-                                    <x-icon :name="$feature['icon']" class="size-5" />
+                    <div class="mt-14 grid items-stretch gap-4 lg:grid-cols-[minmax(0,1fr)_5rem_minmax(0,1.25fr)_5rem_minmax(0,1fr)] lg:gap-0">
+                        {{-- Reads --}}
+                        <div class="flex flex-col rounded-xl border border-white/10 bg-white/3 p-5">
+                            <p class="font-mono text-xs tracking-widest uppercase text-orchid-300">{{ $pipeline['reads']['title'] }}</p>
+
+                            <ul class="mt-5 flex flex-col gap-2.5">
+                                @foreach ($pipeline['reads']['nodes'] as $node)
+                                    <li class="flex items-center gap-3 rounded-lg border border-white/10 bg-plum-900/60 px-3 py-2.5">
+                                        <x-icon :name="$node['icon']" class="size-4 shrink-0 text-plum-400" />
+                                        <span class="font-mono text-sm text-plum-100">{{ $node['label'] }}</span>
+                                        <span class="ml-auto font-mono text-xs text-plum-500">{{ $node['meta'] }}</span>
+                                    </li>
+                                @endforeach
+                            </ul>
+
+                            <p class="mt-5 text-sm/relaxed text-pretty text-plum-400">{{ $pipeline['reads']['caption'] }}</p>
+                        </div>
+
+                        <x-connector class="lg:px-4" />
+
+                        {{-- Leelabot and its plugins --}}
+                        <div class="flex flex-col rounded-xl border border-orchid-400/25 bg-orchid-500/6 p-5">
+                            <p class="font-mono text-xs tracking-widest uppercase text-orchid-300">{{ $pipeline['core']['title'] }}</p>
+
+                            {{-- Plugins ring the core: half above, half below, dotted into it. --}}
+                            @php($half = (int) ceil(count($pipeline['core']['plugins']) / 2))
+                            <div class="mt-5 flex flex-col items-center gap-2.5">
+                                <ul class="flex flex-wrap justify-center gap-2">
+                                    @foreach (array_slice($pipeline['core']['plugins'], 0, $half) as $plugin)
+                                        <li class="rounded-md border border-white/10 bg-plum-900/60 px-2.5 py-1 font-mono text-xs text-plum-300">{{ $plugin }}</li>
+                                    @endforeach
+                                </ul>
+
+                                <span class="dot-rule-y h-6 w-px text-orchid-400" aria-hidden="true"></span>
+
+                                <span class="rounded-lg border border-orchid-400/40 bg-plum-950/70 px-4 py-2.5">
+                                    <img src="/leelabot-logo.png" alt="Leelabot" width="92" height="48" class="h-7 w-auto">
                                 </span>
-                                <h3 class="font-medium text-white">{{ $feature['title'] }}</h3>
-                                <p class="text-sm/relaxed text-pretty text-plum-400">{{ $feature['body'] }}</p>
+
+                                <span class="dot-rule-y h-6 w-px text-orchid-400" aria-hidden="true"></span>
+
+                                <ul class="flex flex-wrap justify-center gap-2">
+                                    @foreach (array_slice($pipeline['core']['plugins'], $half) as $plugin)
+                                        <li class="rounded-md border border-white/10 bg-plum-900/60 px-2.5 py-1 font-mono text-xs text-plum-300">{{ $plugin }}</li>
+                                    @endforeach
+                                </ul>
                             </div>
-                        @endforeach
+
+                            <p class="mt-5 text-sm/relaxed text-pretty text-plum-400">{{ $pipeline['core']['caption'] }}</p>
+                        </div>
+
+                        <x-connector class="lg:px-4" />
+
+                        {{-- Answers --}}
+                        <div class="flex flex-col rounded-xl border border-white/10 bg-white/3 p-5">
+                            <p class="font-mono text-xs tracking-widest uppercase text-orchid-300">{{ $pipeline['speaks']['title'] }}</p>
+
+                            <ul class="mt-5 flex flex-col gap-2.5">
+                                @foreach ($pipeline['speaks']['nodes'] as $node)
+                                    <li class="flex items-center gap-3 rounded-lg border border-white/10 bg-plum-900/60 px-3 py-2.5">
+                                        <x-icon :name="$node['icon']" class="size-4 shrink-0 text-plum-400" />
+                                        <span class="font-mono text-sm text-plum-100">{{ $node['label'] }}</span>
+                                        <span class="ml-auto text-xs text-plum-500">{{ $node['meta'] }}</span>
+                                    </li>
+                                @endforeach
+                            </ul>
+
+                            <p class="mt-5 text-sm/relaxed text-pretty text-plum-400">{{ $pipeline['speaks']['caption'] }}</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -150,19 +206,32 @@
                     <h2 class="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Commands, typed in game</h2>
                     <p class="mt-4 max-w-xl text-pretty text-plum-400">
                         Rights are per command and per admin level, so trusted regulars can call a vote
-                        without ever getting near your RCon password.
+                        without ever getting near your RCon password. Hover one to see what it does.
                     </p>
 
                     <ul class="mt-8 flex flex-wrap gap-2">
-                        @foreach (config('leelabot.commands') as $command)
-                            <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">{{ $command }}</li>
+                        @foreach (config('leelabot.commands') as $index => $command)
+                            <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-{{ $index }}"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >{{ $command['name'] }}</button>
+
+                                {{-- display:none while idle so the tooltip never widens the page. --}}
+                                <span
+                                    id="command-{{ $index }}"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >{{ $command['help'] }}</span>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
             </section>
 
             {{-- Plugins --}}
-            <section id="plugins" class="border-t border-white/5 bg-plum-950/40">
+            <section id="plugins" class="border-t border-white/5">
                 <div class="mx-auto max-w-6xl px-6 py-20">
                     <h2 class="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Plugins in the box</h2>
                     <p class="mt-4 max-w-xl text-pretty text-plum-400">
@@ -172,7 +241,7 @@
 
                     <dl class="mt-12 grid gap-x-10 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
                         @foreach (config('leelabot.plugins') as $plugin)
-                            <div class="flex flex-col gap-1.5 border-l border-orchid-500/25 pl-4">
+                            <div class="flex flex-col gap-1.5 border-l border-orchid-400/30 pl-4">
                                 <dt class="font-mono text-sm text-orchid-300">{{ $plugin['name'] }}</dt>
                                 <dd class="text-sm/relaxed text-pretty text-plum-400">{{ $plugin['body'] }}</dd>
                             </div>
@@ -201,11 +270,11 @@
                         </dl>
                     </div>
 
-                    <div class="min-w-0 overflow-x-auto rounded-xl border border-white/8 bg-plum-950/70 p-5 font-mono text-[13px]/relaxed text-plum-300 shadow-xl shadow-black/40">
-                        <p class="whitespace-nowrap"><span class="text-orchid-400">$</span> git clone {{ config('leelabot.repository') }}.git</p>
-                        <p class="whitespace-nowrap"><span class="text-orchid-400">$</span> cd Leelabot</p>
+                    <div class="min-w-0 overflow-x-auto rounded-xl border border-white/10 bg-plum-900/70 p-5 font-mono text-[13px]/relaxed text-plum-200 shadow-xl shadow-black/40">
+                        <p class="whitespace-nowrap"><span class="text-orchid-300">$</span> git clone {{ config('leelabot.repository') }}.git</p>
+                        <p class="whitespace-nowrap"><span class="text-orchid-300">$</span> cd Leelabot</p>
                         <p class="mt-3 whitespace-nowrap text-plum-500"># edit the config, then:</p>
-                        <p class="whitespace-nowrap"><span class="text-orchid-400">$</span> php bot.php</p>
+                        <p class="whitespace-nowrap"><span class="text-orchid-300">$</span> php bot.php</p>
                     </div>
                 </div>
             </section>

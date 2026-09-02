@@ -17,45 +17,41 @@ return [
     ],
 
     /*
-     * The headline capabilities. Each icon name must exist in the
-     * <x-icon> component.
+     * What the bot actually does, as a pipeline: it tails the server logs,
+     * dispatches each line to the loaded plugins, and answers on three
+     * channels. Rendered as the three-column diagram on the homepage.
      */
-    'features' => [
-        [
-            'icon' => 'servers',
-            'title' => 'One process, every server',
-            'body' => 'Leelabot dispatches to as many Urban Terror instances as you throw at it, each with its own configuration and its own set of plugins.',
+    'pipeline' => [
+        'reads' => [
+            'title' => 'Reads',
+            'caption' => 'One games.log per server. Leelabot follows them all at once and turns every line into an event.',
+            'nodes' => [
+                ['icon' => 'file', 'label' => 'games.log', 'meta' => 'server 1'],
+                ['icon' => 'file', 'label' => 'games.log', 'meta' => 'server 2'],
+                ['icon' => 'file', 'label' => 'games.log', 'meta' => 'server 3'],
+            ],
         ],
-        [
-            'icon' => 'blocks',
-            'title' => 'Everything is a plugin',
-            'body' => 'The core parses the server and fires events. Features live in plugins — drop a PHP file in plugins/, hook the events you care about, reload.',
+
+        'core' => [
+            'title' => 'Dispatches',
+            'caption' => 'The core parses the server and fires events. Every feature is a plugin listening for the ones it cares about.',
+            'plugins' => ['adminbase', 'basicrights', 'stats', 'bans', 'warns', 'logs'],
         ],
-        [
-            'icon' => 'prompt',
-            'title' => 'RCon from the chat box',
-            'body' => 'Change maps, force teams, veto votes, pause the round or slap someone, all typed straight into in-game chat instead of a console.',
-        ],
-        [
-            'icon' => 'shield',
-            'title' => 'Moderation on autopilot',
-            'body' => 'Warns fire automatically on teamkilling and insults, and kick the players who keep at it. Bans persist to disk and survive a restart.',
-        ],
-        [
-            'icon' => 'chart',
-            'title' => 'Stats and awards',
-            'body' => 'Per-player statistics tracked across the round, with end-of-game awards announced in chat. Players pull their own with !stats.',
-        ],
-        [
-            'icon' => 'relay',
-            'title' => 'Bridged to IRC and TeamSpeak',
-            'body' => 'A full IRC bot relays the server chat to your channel, and the TeamSpeak plugin reports who is sitting in voice.',
+
+        'speaks' => [
+            'title' => 'Answers',
+            'caption' => 'Replies go back to the players over RCon, and out to the channels your admins are already sitting in.',
+            'nodes' => [
+                ['icon' => 'prompt', 'label' => 'RCon', 'meta' => 'back into the game'],
+                ['icon' => 'relay', 'label' => 'IRC', 'meta' => 'your channel'],
+                ['icon' => 'voice', 'label' => 'TeamSpeak', 'meta' => "who's in voice"],
+            ],
         ],
     ],
 
     /*
-     * The hero scoreboard: Urban Terror's two sides with the bot between
-     * them. Illustrative round data, shaped like what the stats plugin tracks.
+     * The hero HUD: chat on the left, score on the right, over a shot of the
+     * game. Illustrative round data, shaped like what the stats plugin tracks.
      */
     'scoreboard' => [
         'map' => 'ut4_casa',
@@ -104,13 +100,34 @@ return [
     ],
 
     /*
-     * A sample of the in-game commands.
+     * In-game commands and what each one does. Wording is taken from the
+     * doc blocks in the plugin sources, so the tooltips match the code.
      */
     'commands' => [
-        '!kick', '!ban', '!mute', '!slap', '!warn', '!clearwarns',
-        '!map', '!cyclemap', '!nextmap', '!veto', '!pause', '!shuffleteams',
-        '!swap', '!force', '!bigtext', '!say', '!stats', '!awards',
-        '!setadmin', '!giverights', '!list', '!rcon', '!reload', '!die',
+        ['name' => '!kick', 'help' => 'Kicks a player from the server.'],
+        ['name' => '!ban', 'help' => 'Bans a player. The ban list is kept on disk and survives a restart.'],
+        ['name' => '!mute', 'help' => 'Mutes a player in the server.'],
+        ['name' => '!slap', 'help' => 'Slaps a player from the server.'],
+        ['name' => '!warn', 'help' => 'Warns a player. Enough warnings and they get kicked automatically.'],
+        ['name' => '!clearwarns', 'help' => "Clears a player's accumulated warnings."],
+        ['name' => '!map', 'help' => 'Change the current map. Reloads the server.'],
+        ['name' => '!cyclemap', 'help' => 'Go to the next map.'],
+        ['name' => '!nextmap', 'help' => 'Change the map that comes next.'],
+        ['name' => '!veto', 'help' => 'Cancel a vote in progress.'],
+        ['name' => '!pause', 'help' => 'Pause the game.'],
+        ['name' => '!shuffleteams', 'help' => 'Shuffle the teams, with a restart.'],
+        ['name' => '!swap', 'help' => 'Swap the two teams.'],
+        ['name' => '!force', 'help' => 'Force a player into a team.'],
+        ['name' => '!bigtext', 'help' => "Print a large message across everyone's screen."],
+        ['name' => '!say', 'help' => 'Send a message to everyone.'],
+        ['name' => '!stats', 'help' => 'Kills, deaths and ratio for the round.'],
+        ['name' => '!awards', 'help' => 'Announce the end-of-round awards.'],
+        ['name' => '!setadmin', 'help' => 'Promote a player to an admin level.'],
+        ['name' => '!giverights', 'help' => 'Give a player a specific level.'],
+        ['name' => '!list', 'help' => 'List the players on the server.'],
+        ['name' => '!rcon', 'help' => 'Send an RCon command straight to the server.'],
+        ['name' => '!reload', 'help' => 'Reload the game.'],
+        ['name' => '!die', 'help' => 'Stop the bot.'],
     ],
 
 ];

@@ -9,39 +9,39 @@
     --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
 
     /*
-     * Orchid — sampled from the project's own 88x31 badge (#a261a1), with
-     * #e7d1e6 as the 200 and #5a3670 as the 800.
+     * Orchid — from the project's own assets: #a261a1 on the 88x31 badge and
+     * #c892ff on the wordmark the old leelabot.com used.
      */
-    --color-orchid-50: oklch(0.970 0.014 327);
-    --color-orchid-100: oklch(0.938 0.028 327);
-    --color-orchid-200: oklch(0.885 0.037 327);
-    --color-orchid-300: oklch(0.790 0.070 327);
-    --color-orchid-400: oklch(0.681 0.098 327);
-    --color-orchid-500: oklch(0.588 0.120 327);
-    --color-orchid-600: oklch(0.512 0.130 325);
-    --color-orchid-700: oklch(0.440 0.120 320);
-    --color-orchid-800: oklch(0.403 0.102 311);
+    --color-orchid-50: oklch(0.970 0.014 320);
+    --color-orchid-100: oklch(0.938 0.030 320);
+    --color-orchid-200: oklch(0.885 0.050 320);
+    --color-orchid-300: oklch(0.800 0.090 318);
+    --color-orchid-400: oklch(0.720 0.130 316);
+    --color-orchid-500: oklch(0.640 0.160 315);
+    --color-orchid-600: oklch(0.550 0.160 318);
+    --color-orchid-700: oklch(0.470 0.140 318);
+    --color-orchid-800: oklch(0.400 0.110 314);
     --color-orchid-900: oklch(0.320 0.085 315);
-    --color-orchid-950: oklch(0.225 0.060 318);
+    --color-orchid-950: oklch(0.235 0.058 316);
 
-    /* Neutrals carry a faint violet cast so they sit under the orchid. */
-    --color-plum-100: oklch(0.940 0.008 318);
-    --color-plum-200: oklch(0.880 0.010 318);
-    --color-plum-300: oklch(0.800 0.012 318);
-    --color-plum-400: oklch(0.700 0.015 318);
-    --color-plum-500: oklch(0.600 0.018 318);
-    --color-plum-600: oklch(0.500 0.022 318);
-    --color-plum-700: oklch(0.380 0.026 318);
-    --color-plum-800: oklch(0.285 0.028 318);
-    --color-plum-850: oklch(0.235 0.028 318);
-    --color-plum-900: oklch(0.195 0.026 318);
-    --color-plum-950: oklch(0.155 0.022 318);
+    /* Neutrals: only a trace of violet, so the page reads as slate not purple. */
+    --color-plum-100: oklch(0.945 0.004 318);
+    --color-plum-200: oklch(0.890 0.005 318);
+    --color-plum-300: oklch(0.815 0.006 318);
+    --color-plum-400: oklch(0.720 0.007 318);
+    --color-plum-500: oklch(0.625 0.008 318);
+    --color-plum-600: oklch(0.530 0.009 318);
+    --color-plum-700: oklch(0.430 0.010 318);
+    --color-plum-800: oklch(0.345 0.010 318);
+    --color-plum-850: oklch(0.298 0.010 318);
+    --color-plum-900: oklch(0.262 0.009 318);
+    --color-plum-950: oklch(0.218 0.008 318);
 
     /* Urban Terror's two sides. Reserved for team semantics, nothing else. */
     --color-team-blue: oklch(0.620 0.180 253);
-    --color-team-blue-bright: oklch(0.720 0.150 250);
+    --color-team-blue-bright: oklch(0.735 0.150 250);
     --color-team-red: oklch(0.605 0.205 27);
-    --color-team-red-bright: oklch(0.700 0.175 25);
+    --color-team-red-bright: oklch(0.710 0.175 25);
 }
 
 @layer base {
@@ -50,29 +50,28 @@
     }
 }
 
-/*
- * Decorative page backdrop: a faint grid, a blue wash on the left, a red wash
- * on the right, and orchid pooled in the middle where the bot sits.
- */
+/* A tighter, more present grid than a texture — it should read as a field. */
 @utility field-grid {
     background-image:
-        linear-gradient(to right, oklch(1 0 0 / 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, oklch(1 0 0 / 0.05) 1px, transparent 1px);
-    background-size: 56px 56px;
-    mask-image: radial-gradient(ellipse 100% 60% at 50% 0%, black 30%, transparent 78%);
+        linear-gradient(to right, oklch(1 0 0 / 0.055) 1px, transparent 1px),
+        linear-gradient(to bottom, oklch(1 0 0 / 0.055) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 92%);
 }
 
+/* Blue bleeding in from the left, red from the right, orchid pooled between. */
 @utility team-wash {
     background-image:
-        radial-gradient(ellipse 42% 46% at 0% 12%, color-mix(in oklab, var(--color-team-blue) 26%, transparent), transparent 70%),
-        radial-gradient(ellipse 42% 46% at 100% 12%, color-mix(in oklab, var(--color-team-red) 26%, transparent), transparent 70%),
-        radial-gradient(ellipse 55% 40% at 50% 0%, color-mix(in oklab, var(--color-orchid-500) 24%, transparent), transparent 72%);
+        radial-gradient(ellipse 45% 40% at 0% 8%, color-mix(in oklab, var(--color-team-blue) 16%, transparent), transparent 70%),
+        radial-gradient(ellipse 45% 40% at 100% 8%, color-mix(in oklab, var(--color-team-red) 16%, transparent), transparent 70%),
+        radial-gradient(ellipse 55% 35% at 50% 0%, color-mix(in oklab, var(--color-orchid-500) 13%, transparent), transparent 72%);
 }
 
-@utility bot-glow {
-    background-image: radial-gradient(
-        ellipse 70% 100% at 50% 0%,
-        color-mix(in oklab, var(--color-orchid-500) 28%, transparent),
-        transparent 70%
-    );
+/* Dotted rules for the pipeline diagram, so the dashes stay even at any width. */
+@utility dot-rule-x {
+    background-image: repeating-linear-gradient(to right, currentColor 0 3px, transparent 3px 8px);
+}
+
+@utility dot-rule-y {
+    background-image: repeating-linear-gradient(to bottom, currentColor 0 3px, transparent 3px 8px);
 }
