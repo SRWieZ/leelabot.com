@@ -20,17 +20,20 @@ test('the homepage exposes no dev server asset urls', function () {
     $this->get('/')->assertDontSee('localhost:5173');
 });
 
-test('the homepage shows both teams and the bot between them', function () {
+test('the scoreboard shows both teams with kills to deaths per player', function () {
     $board = config('leelabot.scoreboard');
 
     $response = $this->get('/');
 
-    $response->assertSee('Blue')
-        ->assertSee('Red')
-        ->assertSee($board['map']);
+    $response->assertSee('Blue')->assertSee('Red');
 
     foreach ([...$board['blue'], ...$board['red']] as $player) {
-        $response->assertSee($player['name']);
+        $response->assertSee($player['name'])
+            ->assertSee($player['kills'].':'.$player['deaths']);
+    }
+
+    foreach (['blue', 'red'] as $side) {
+        $response->assertSee((string) array_sum(array_column($board[$side], 'kills')));
     }
 });
 

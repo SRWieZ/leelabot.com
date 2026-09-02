@@ -100,16 +100,11 @@
                             </div>
                         </div>
 
-                        {{-- Scoreboard, top right. --}}
+                        {{-- Scoreboard, top right, built like the in-game one. --}}
                         <div class="order-1 lg:order-2">
-                            <div class="rounded-xl border border-white/10 bg-black/55 p-4 backdrop-blur-sm">
-                                <div class="flex items-baseline gap-2 border-b border-white/10 pb-3 font-mono text-xs">
-                                    <span class="text-white">{{ $board['map'] }}</span>
-                                    <span class="ml-auto text-plum-400">{{ $board['gametype'] }}</span>
-                                </div>
-
-                                <x-team-panel side="blue" :players="$board['blue']" class="pt-4" />
-                                <x-team-panel side="red" :players="$board['red']" class="mt-4 border-t border-white/10 pt-4" />
+                            <div class="flex flex-col gap-2 overflow-hidden rounded-md border border-white/20 bg-black/40 p-1">
+                                <x-team-panel side="blue" :players="$board['blue']" />
+                                <x-team-panel side="red" :players="$board['red']" />
                             </div>
                         </div>
                     </div>

@@ -37,6 +37,15 @@
     --color-plum-900: oklch(0.262 0.009 318);
     --color-plum-950: oklch(0.218 0.008 318);
 
+    /*
+     * Sampled straight out of the game's HUD: the scoreboard row fills and the
+     * team score bars above them.
+     */
+    --color-hud-blue: #1a1478;
+    --color-hud-blue-bar: #010090;
+    --color-hud-red: #7d120e;
+    --color-hud-red-bar: #900100;
+
     /* Urban Terror's two sides. Reserved for team semantics, nothing else. */
     --color-team-blue: oklch(0.620 0.180 253);
     --color-team-blue-bright: oklch(0.735 0.150 250);

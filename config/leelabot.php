@@ -53,22 +53,24 @@ return [
      * The hero HUD: chat on the left, score on the right, over a shot of the
      * game. Illustrative round data, shaped like what the stats plugin tracks.
      */
+    /*
+     * The hero HUD: chat on the left, scoreboard on the right, over a shot of
+     * the game. Rows mimic the in-game board — a square for players still
+     * alive, then kills:deaths, then the name.
+     */
     'scoreboard' => [
-        'map' => 'ut4_casa',
-        'gametype' => 'Team Deathmatch',
-
         'blue' => [
-            ['name' => 'Zaki', 'kills' => 24, 'deaths' => 9],
-            ['name' => 'Duke', 'kills' => 19, 'deaths' => 12],
-            ['name' => 'Ash', 'kills' => 15, 'deaths' => 14],
-            ['name' => 'Nyx', 'kills' => 11, 'deaths' => 13],
+            ['name' => 'Zaki', 'kills' => 24, 'deaths' => 9, 'alive' => true],
+            ['name' => 'Duke', 'kills' => 19, 'deaths' => 12, 'alive' => true],
+            ['name' => 'Ash', 'kills' => 15, 'deaths' => 14, 'alive' => false],
+            ['name' => 'Nyx', 'kills' => 11, 'deaths' => 13, 'alive' => true],
         ],
 
         'red' => [
-            ['name' => 'Rook', 'kills' => 21, 'deaths' => 11],
-            ['name' => 'Vex', 'kills' => 18, 'deaths' => 10],
-            ['name' => 'Kilo', 'kills' => 14, 'deaths' => 16],
-            ['name' => 'Sable', 'kills' => 9, 'deaths' => 15],
+            ['name' => 'Rook', 'kills' => 21, 'deaths' => 11, 'alive' => true],
+            ['name' => 'Vex', 'kills' => 18, 'deaths' => 10, 'alive' => true],
+            ['name' => 'Kilo', 'kills' => 14, 'deaths' => 16, 'alive' => true],
+            ['name' => 'Sable', 'kills' => 9, 'deaths' => 15, 'alive' => false],
         ],
 
         'feed' => [
