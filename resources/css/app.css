@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+
+    /* Urban Terror inspired ember accent. */
+    --color-ember-50: oklch(0.971 0.014 43);
+    --color-ember-100: oklch(0.942 0.032 43);
+    --color-ember-200: oklch(0.885 0.063 42);
+    --color-ember-300: oklch(0.812 0.104 41);
+    --color-ember-400: oklch(0.742 0.152 40);
+    --color-ember-500: oklch(0.672 0.191 34);
+    --color-ember-600: oklch(0.598 0.196 30);
+    --color-ember-700: oklch(0.512 0.172 29);
+    --color-ember-800: oklch(0.434 0.141 29);
+    --color-ember-900: oklch(0.377 0.115 30);
+}
