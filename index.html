@@ -7,7 +7,7 @@
         <title>Leelabot — an administration bot for Urban Terror</title>
         <meta name="description" content="Leelabot runs your Urban Terror servers: RCon from the chat box, automatic warns and bans, player stats, and an IRC bridge. Free software, written in PHP.">
         <link rel="canonical" href="https://leelabot.com">
-        <meta name="theme-color" content="#191320">
+        <meta name="theme-color" content="#2b2830">
 
         <meta property="og:type" content="website">
         <meta property="og:title" content="Leelabot — an administration bot for Urban Terror">
@@ -77,7 +77,7 @@
   font-family: var(--font-instrument-sans);
 }
 </style>
-        <link rel="preload" as="style" href="https://leelabot.com/build/assets/app-DcplthiZ.css" /><link rel="modulepreload" as="script" href="https://leelabot.com/build/assets/app-BvRk9kiK.js" /><link rel="stylesheet" href="https://leelabot.com/build/assets/app-DcplthiZ.css" /><script type="module" src="https://leelabot.com/build/assets/app-BvRk9kiK.js"></script>    </head>
+        <link rel="preload" as="style" href="https://leelabot.com/build/assets/app-CRd4RYoV.css" /><link rel="modulepreload" as="script" href="https://leelabot.com/build/assets/app-BvRk9kiK.js" /><link rel="stylesheet" href="https://leelabot.com/build/assets/app-CRd4RYoV.css" /><script type="module" src="https://leelabot.com/build/assets/app-BvRk9kiK.js"></script>    </head>
 
     <body class="relative min-h-screen bg-plum-950 font-sans text-plum-400 antialiased">
         
@@ -90,19 +90,14 @@
             Skip to content
         </a>
 
-        <header class="sticky top-0 z-40 border-b border-white/5 bg-plum-950/70 backdrop-blur-md">
-            <div class="mx-auto flex max-w-6xl items-center gap-6 px-6 py-4">
-                <a href="/" class="flex items-center gap-2.5 font-semibold tracking-tight text-white">
-                    <svg class="size-7 text-orchid-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
-    <circle cx="12" cy="12" r="8.25" />
-    <path d="M12 1.75v4.5M12 17.75v4.5M1.75 12h4.5M17.75 12h4.5" />
-    <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none" />
-</svg>
-                    Leelabot
+        <header class="relative z-30">
+            <div class="mx-auto flex max-w-6xl items-center gap-6 px-6 py-6">
+                <a href="/" class="shrink-0">
+                    <img src="/leelabot-logo.png" alt="Leelabot" width="92" height="48" class="h-9 w-auto">
                 </a>
 
                 <nav class="ml-auto flex items-center gap-6 text-sm">
-                    <a href="#features" class="hidden text-plum-400 transition-colors hover:text-orchid-300 sm:block">Features</a>
+                    <a href="#how" class="hidden text-plum-400 transition-colors hover:text-orchid-300 sm:block">How it works</a>
                     <a href="#plugins" class="hidden text-plum-400 transition-colors hover:text-orchid-300 sm:block">Plugins</a>
                     <a href="#install" class="hidden text-plum-400 transition-colors hover:text-orchid-300 sm:block">Install</a>
                     <a href="https://github.com/ylorant/Leelabot" class="font-medium text-plum-100 transition-colors hover:text-orchid-300">GitHub&nbsp;&rarr;</a>
@@ -112,8 +107,8 @@
 
         <main id="content">
             
-            <section class="mx-auto flex max-w-3xl flex-col items-center gap-7 px-6 pt-20 pb-16 text-center lg:pt-28">
-                <span class="inline-flex items-center gap-2 rounded-full border border-orchid-500/30 bg-orchid-500/10 px-3.5 py-1 font-mono text-xs text-orchid-200">
+            <section class="mx-auto flex max-w-3xl flex-col items-center gap-7 px-6 pt-14 pb-14 text-center lg:pt-20">
+                <span class="inline-flex items-center gap-2 rounded-full border border-orchid-400/30 bg-orchid-500/10 px-3.5 py-1 font-mono text-xs text-orchid-200">
                     Urban Terror &middot; PHP &middot; GPL-2.0+
                 </span>
 
@@ -121,16 +116,16 @@
                     Run your Urban Terror servers from the chat box.
                 </h1>
 
-                <p class="max-w-xl text-lg/relaxed text-pretty text-plum-400">
+                <p class="max-w-xl text-lg/relaxed text-pretty text-plum-300">
                     Leelabot sits between the two teams and your RCon. It answers admin commands typed
                     in game, hands out warns and bans on its own, and keeps the stats.
                 </p>
 
                 <div class="flex flex-wrap items-center justify-center gap-3">
-                    <a href="#install" class="rounded-lg bg-orchid-600 px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-orchid-950/50 transition-colors hover:bg-orchid-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400">
+                    <a href="#install" class="rounded-lg bg-orchid-600 px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-black/40 transition-colors hover:bg-orchid-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400">
                         Get started
                     </a>
-                    <a href="https://github.com/ylorant/Leelabot" class="rounded-lg border border-white/12 bg-white/4 px-5 py-2.5 text-sm font-medium text-plum-100 transition-colors hover:border-white/25 hover:bg-white/8">
+                    <a href="https://github.com/ylorant/Leelabot" class="rounded-lg border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-medium text-plum-100 transition-colors hover:border-white/30 hover:bg-white/10">
                         Source on GitHub
                     </a>
                 </div>
@@ -138,265 +133,274 @@
 
             
                         <section class="mx-auto max-w-6xl px-6 pb-24">
-                <div class="overflow-hidden rounded-2xl border border-white/8 bg-plum-900/50 shadow-2xl shadow-black/50 backdrop-blur-sm">
-                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-white/8 px-5 py-3 font-mono text-xs text-plum-500">
-                        <span class="text-plum-300">ut4_casa</span>
-                        <span aria-hidden="true">&middot;</span>
-                        <span>Team Deathmatch</span>
-                        <span aria-hidden="true">&middot;</span>
-                        <span>8 players</span>
-                    </div>
+                <div class="relative isolate overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/60">
+                    <img src="/ut4-backdrop.jpg" alt="" aria-hidden="true" class="absolute inset-0 -z-10 size-full object-cover">
+                    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-plum-950/95 via-plum-950/55 to-plum-950/90"></div>
+                    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-plum-950 via-transparent to-plum-950/40"></div>
 
-                    <div class="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)_minmax(0,1fr)]">
-                        <div class="relative isolate flex flex-col overflow-hidden p-5 sm:p-6">
-    <div class="absolute inset-x-0 top-0 -z-10 h-24 bg-gradient-to-b from-team-blue/12 to-transparent"></div>
-
-    <div class="flex items-center gap-2.5">
-        <span class="size-2 rounded-full bg-team-blue"></span>
-        <span class="font-mono text-xs tracking-widest uppercase text-team-blue-bright">Blue team</span>
-        <span class="ml-auto font-mono text-sm tabular-nums text-plum-200">69</span>
-    </div>
-
-    <ul class="my-auto flex flex-col gap-3.5 pt-6">
-                    <li class="flex flex-col gap-1.5">
-                <div class="flex items-baseline gap-3 font-mono text-sm">
-                    <span class="text-plum-200">Zaki</span>
-                    <span class="ml-auto tabular-nums text-plum-300">24</span>
-                    <span class="tabular-nums text-plum-500">/ 9</span>
-                </div>
-                <div class="h-1 overflow-hidden rounded-full bg-team-blue/15">
-                    <div class="h-full rounded-full bg-team-blue" style="width: 100%"></div>
-                </div>
-            </li>
-                    <li class="flex flex-col gap-1.5">
-                <div class="flex items-baseline gap-3 font-mono text-sm">
-                    <span class="text-plum-200">Duke</span>
-                    <span class="ml-auto tabular-nums text-plum-300">19</span>
-                    <span class="tabular-nums text-plum-500">/ 12</span>
-                </div>
-                <div class="h-1 overflow-hidden rounded-full bg-team-blue/15">
-                    <div class="h-full rounded-full bg-team-blue" style="width: 79%"></div>
-                </div>
-            </li>
-                    <li class="flex flex-col gap-1.5">
-                <div class="flex items-baseline gap-3 font-mono text-sm">
-                    <span class="text-plum-200">Ash</span>
-                    <span class="ml-auto tabular-nums text-plum-300">15</span>
-                    <span class="tabular-nums text-plum-500">/ 14</span>
-                </div>
-                <div class="h-1 overflow-hidden rounded-full bg-team-blue/15">
-                    <div class="h-full rounded-full bg-team-blue" style="width: 63%"></div>
-                </div>
-            </li>
-                    <li class="flex flex-col gap-1.5">
-                <div class="flex items-baseline gap-3 font-mono text-sm">
-                    <span class="text-plum-200">Nyx</span>
-                    <span class="ml-auto tabular-nums text-plum-300">11</span>
-                    <span class="tabular-nums text-plum-500">/ 13</span>
-                </div>
-                <div class="h-1 overflow-hidden rounded-full bg-team-blue/15">
-                    <div class="h-full rounded-full bg-team-blue" style="width: 46%"></div>
-                </div>
-            </li>
-            </ul>
-</div>
-
+                    <div class="grid min-h-[23rem] gap-8 p-5 sm:p-7 lg:grid-cols-[minmax(0,1fr)_19rem] lg:gap-10">
                         
-                        <div class="relative isolate flex flex-col gap-5 border-y border-white/8 bg-orchid-950/40 p-5 sm:p-6 lg:border-x lg:border-y-0">
-                            <div class="bot-glow pointer-events-none absolute inset-x-0 top-0 -z-10 h-40"></div>
-
-                            <div class="flex flex-col items-center gap-2 pt-1">
-                                <span class="grid size-14 place-items-center rounded-2xl border border-orchid-400/25 bg-orchid-500/12 text-orchid-300 shadow-lg shadow-orchid-950/60">
-                                    <svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
-    <circle cx="12" cy="12" r="8.25" />
-    <path d="M12 1.75v4.5M12 17.75v4.5M1.75 12h4.5M17.75 12h4.5" />
-    <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none" />
-</svg>
-                                </span>
-                                <span class="font-semibold tracking-tight text-white">Leelabot</span>
-                                <span class="font-mono text-[11px] tracking-widest uppercase text-orchid-300/70">refereeing</span>
-                            </div>
-
-                            
-                            <div class="min-w-0 rounded-lg border border-white/8 bg-plum-950/60 p-3.5">
-                                <div class="flex flex-col gap-2 font-mono text-[13px]/relaxed">
-                                                                                                                    <p class="flex gap-2">
-                                            <span class="shrink-0 text-plum-500">19:04</span>
-                                            <span class="min-w-0 break-words">
-                                                <span class="text-team-blue-bright">Zaki:</span>
-                                                <span class="text-plum-100">!stats</span>
-                                            </span>
-                                        </p>
-                                                                                                                    <p class="flex gap-2">
-                                            <span class="shrink-0 text-plum-500">19:04</span>
-                                            <span class="min-w-0 break-words">
-                                                <span class="text-orchid-300">Leelabot:</span>
-                                                <span class="text-plum-300">Zaki — 24 kills, 9 deaths, ratio 2.66</span>
-                                            </span>
-                                        </p>
-                                                                                                                    <p class="flex gap-2">
-                                            <span class="shrink-0 text-plum-500">19:06</span>
-                                            <span class="min-w-0 break-words">
-                                                <span class="text-team-red-bright">Rook:</span>
-                                                <span class="text-plum-100">!nextmap</span>
-                                            </span>
-                                        </p>
-                                                                                                                    <p class="flex gap-2">
-                                            <span class="shrink-0 text-plum-500">19:06</span>
-                                            <span class="min-w-0 break-words">
-                                                <span class="text-orchid-300">Leelabot:</span>
-                                                <span class="text-plum-300">Next map is ut4_turnpike</span>
-                                            </span>
-                                        </p>
-                                                                                                                    <p class="flex gap-2">
-                                            <span class="shrink-0 text-plum-500">19:11</span>
-                                            <span class="min-w-0 break-words">
-                                                <span class="text-orchid-300">Leelabot:</span>
-                                                <span class="text-plum-300">Kilo warned (2/3) — teamkill</span>
-                                            </span>
-                                        </p>
-                                                                                                                    <p class="flex gap-2">
-                                            <span class="shrink-0 text-plum-500">19:12</span>
-                                            <span class="min-w-0 break-words">
-                                                <span class="text-team-blue-bright">Duke:</span>
-                                                <span class="text-plum-100">!cyclemap</span>
-                                            </span>
-                                        </p>
-                                                                    </div>
-                            </div>
+                        <div class="order-2 flex flex-col justify-end lg:order-1">
+                            <div class="flex flex-col gap-1.5 font-mono text-[13px]/relaxed [text-shadow:0_1px_3px_rgb(0_0_0/0.95)]">
+                                                                                                        <p class="flex gap-2">
+                                        <span class="shrink-0 text-plum-400">19:04</span>
+                                        <span class="min-w-0 break-words">
+                                            <span class="text-team-blue-bright">Zaki:</span>
+                                            <span class="text-white">!stats</span>
+                                        </span>
+                                    </p>
+                                                                                                        <p class="flex gap-2">
+                                        <span class="shrink-0 text-plum-400">19:04</span>
+                                        <span class="min-w-0 break-words">
+                                            <span class="text-orchid-300">Leelabot:</span>
+                                            <span class="text-plum-100">Zaki — 24 kills, 9 deaths, ratio 2.66</span>
+                                        </span>
+                                    </p>
+                                                                                                        <p class="flex gap-2">
+                                        <span class="shrink-0 text-plum-400">19:06</span>
+                                        <span class="min-w-0 break-words">
+                                            <span class="text-team-red-bright">Rook:</span>
+                                            <span class="text-white">!nextmap</span>
+                                        </span>
+                                    </p>
+                                                                                                        <p class="flex gap-2">
+                                        <span class="shrink-0 text-plum-400">19:06</span>
+                                        <span class="min-w-0 break-words">
+                                            <span class="text-orchid-300">Leelabot:</span>
+                                            <span class="text-plum-100">Next map is ut4_turnpike</span>
+                                        </span>
+                                    </p>
+                                                                                                        <p class="flex gap-2">
+                                        <span class="shrink-0 text-plum-400">19:11</span>
+                                        <span class="min-w-0 break-words">
+                                            <span class="text-orchid-300">Leelabot:</span>
+                                            <span class="text-plum-100">Kilo warned (2/3) — teamkill</span>
+                                        </span>
+                                    </p>
+                                                                                                        <p class="flex gap-2">
+                                        <span class="shrink-0 text-plum-400">19:12</span>
+                                        <span class="min-w-0 break-words">
+                                            <span class="text-team-blue-bright">Duke:</span>
+                                            <span class="text-white">!cyclemap</span>
+                                        </span>
+                                    </p>
+                                                            </div>
                         </div>
 
-                        <div class="relative isolate flex flex-col overflow-hidden p-5 sm:p-6">
-    <div class="absolute inset-x-0 top-0 -z-10 h-24 bg-gradient-to-b from-team-red/12 to-transparent"></div>
+                        
+                        <div class="order-1 lg:order-2">
+                            <div class="rounded-xl border border-white/10 bg-black/55 p-4 backdrop-blur-sm">
+                                <div class="flex items-baseline gap-2 border-b border-white/10 pb-3 font-mono text-xs">
+                                    <span class="text-white">ut4_casa</span>
+                                    <span class="ml-auto text-plum-400">Team Deathmatch</span>
+                                </div>
 
-    <div class="flex items-center gap-2.5">
-        <span class="size-2 rounded-full bg-team-red"></span>
-        <span class="font-mono text-xs tracking-widest uppercase text-team-red-bright">Red team</span>
-        <span class="ml-auto font-mono text-sm tabular-nums text-plum-200">62</span>
+                                <div class="pt-4">
+    <div class="flex items-center gap-2">
+        <span class="size-1.5 rounded-full bg-team-blue"></span>
+        <span class="font-mono text-xs tracking-widest uppercase text-team-blue-bright">Blue</span>
+        <span class="ml-auto font-mono text-lg leading-none tabular-nums text-white">69</span>
     </div>
 
-    <ul class="my-auto flex flex-col gap-3.5 pt-6">
-                    <li class="flex flex-col gap-1.5">
-                <div class="flex items-baseline gap-3 font-mono text-sm">
-                    <span class="text-plum-200">Rook</span>
-                    <span class="ml-auto tabular-nums text-plum-300">21</span>
-                    <span class="tabular-nums text-plum-500">/ 11</span>
-                </div>
-                <div class="h-1 overflow-hidden rounded-full bg-team-red/15">
-                    <div class="h-full rounded-full bg-team-red" style="width: 100%"></div>
-                </div>
+    <ul class="mt-2.5 flex flex-col gap-1">
+                    <li class="flex items-baseline gap-3 font-mono text-xs">
+                <span class="truncate text-plum-300">Zaki</span>
+                <span class="ml-auto tabular-nums text-plum-200">24</span>
+                <span class="w-8 shrink-0 text-right tabular-nums text-plum-500">/ 9</span>
             </li>
-                    <li class="flex flex-col gap-1.5">
-                <div class="flex items-baseline gap-3 font-mono text-sm">
-                    <span class="text-plum-200">Vex</span>
-                    <span class="ml-auto tabular-nums text-plum-300">18</span>
-                    <span class="tabular-nums text-plum-500">/ 10</span>
-                </div>
-                <div class="h-1 overflow-hidden rounded-full bg-team-red/15">
-                    <div class="h-full rounded-full bg-team-red" style="width: 86%"></div>
-                </div>
+                    <li class="flex items-baseline gap-3 font-mono text-xs">
+                <span class="truncate text-plum-300">Duke</span>
+                <span class="ml-auto tabular-nums text-plum-200">19</span>
+                <span class="w-8 shrink-0 text-right tabular-nums text-plum-500">/ 12</span>
             </li>
-                    <li class="flex flex-col gap-1.5">
-                <div class="flex items-baseline gap-3 font-mono text-sm">
-                    <span class="text-plum-200">Kilo</span>
-                    <span class="ml-auto tabular-nums text-plum-300">14</span>
-                    <span class="tabular-nums text-plum-500">/ 16</span>
-                </div>
-                <div class="h-1 overflow-hidden rounded-full bg-team-red/15">
-                    <div class="h-full rounded-full bg-team-red" style="width: 67%"></div>
-                </div>
+                    <li class="flex items-baseline gap-3 font-mono text-xs">
+                <span class="truncate text-plum-300">Ash</span>
+                <span class="ml-auto tabular-nums text-plum-200">15</span>
+                <span class="w-8 shrink-0 text-right tabular-nums text-plum-500">/ 14</span>
             </li>
-                    <li class="flex flex-col gap-1.5">
-                <div class="flex items-baseline gap-3 font-mono text-sm">
-                    <span class="text-plum-200">Sable</span>
-                    <span class="ml-auto tabular-nums text-plum-300">9</span>
-                    <span class="tabular-nums text-plum-500">/ 15</span>
-                </div>
-                <div class="h-1 overflow-hidden rounded-full bg-team-red/15">
-                    <div class="h-full rounded-full bg-team-red" style="width: 43%"></div>
-                </div>
+                    <li class="flex items-baseline gap-3 font-mono text-xs">
+                <span class="truncate text-plum-300">Nyx</span>
+                <span class="ml-auto tabular-nums text-plum-200">11</span>
+                <span class="w-8 shrink-0 text-right tabular-nums text-plum-500">/ 13</span>
             </li>
             </ul>
 </div>
+                                <div class="mt-4 border-t border-white/10 pt-4">
+    <div class="flex items-center gap-2">
+        <span class="size-1.5 rounded-full bg-team-red"></span>
+        <span class="font-mono text-xs tracking-widest uppercase text-team-red-bright">Red</span>
+        <span class="ml-auto font-mono text-lg leading-none tabular-nums text-white">62</span>
+    </div>
+
+    <ul class="mt-2.5 flex flex-col gap-1">
+                    <li class="flex items-baseline gap-3 font-mono text-xs">
+                <span class="truncate text-plum-300">Rook</span>
+                <span class="ml-auto tabular-nums text-plum-200">21</span>
+                <span class="w-8 shrink-0 text-right tabular-nums text-plum-500">/ 11</span>
+            </li>
+                    <li class="flex items-baseline gap-3 font-mono text-xs">
+                <span class="truncate text-plum-300">Vex</span>
+                <span class="ml-auto tabular-nums text-plum-200">18</span>
+                <span class="w-8 shrink-0 text-right tabular-nums text-plum-500">/ 10</span>
+            </li>
+                    <li class="flex items-baseline gap-3 font-mono text-xs">
+                <span class="truncate text-plum-300">Kilo</span>
+                <span class="ml-auto tabular-nums text-plum-200">14</span>
+                <span class="w-8 shrink-0 text-right tabular-nums text-plum-500">/ 16</span>
+            </li>
+                    <li class="flex items-baseline gap-3 font-mono text-xs">
+                <span class="truncate text-plum-300">Sable</span>
+                <span class="ml-auto tabular-nums text-plum-200">9</span>
+                <span class="w-8 shrink-0 text-right tabular-nums text-plum-500">/ 15</span>
+            </li>
+            </ul>
+</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             
-            <section id="features" class="border-t border-white/5 bg-plum-950/40">
+                        <section id="how" class="border-t border-white/5">
                 <div class="mx-auto max-w-6xl px-6 py-20">
                     <h2 class="text-2xl font-semibold tracking-tight text-white sm:text-3xl">What it does</h2>
+                    <p class="mt-4 max-w-2xl text-pretty text-plum-400">
+                        It never talks to the game directly. It follows the log files each server writes,
+                        hands what it finds to the plugins you loaded, and answers on whichever channel
+                        makes sense.
+                    </p>
 
-                    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                                                    <div class="flex flex-col gap-3 rounded-xl border border-white/8 bg-white/3 p-5 transition-colors hover:border-orchid-500/30 hover:bg-orchid-500/5">
-                                <span class="grid size-10 place-items-center rounded-lg border border-orchid-400/20 bg-orchid-500/10 text-orchid-300">
-                                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="6" rx="2" />
-            <rect x="3" y="14" width="18" height="6" rx="2" />
-            <path d="M7 7h.01M7 17h.01" />
+                    <div class="mt-14 grid items-stretch gap-4 lg:grid-cols-[minmax(0,1fr)_5rem_minmax(0,1.25fr)_5rem_minmax(0,1fr)] lg:gap-0">
+                        
+                        <div class="flex flex-col rounded-xl border border-white/10 bg-white/3 p-5">
+                            <p class="font-mono text-xs tracking-widest uppercase text-orchid-300">Reads</p>
+
+                            <ul class="mt-5 flex flex-col gap-2.5">
+                                                                    <li class="flex items-center gap-3 rounded-lg border border-white/10 bg-plum-900/60 px-3 py-2.5">
+                                        <svg class="size-4 shrink-0 text-plum-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M13.5 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5z" />
+            <path d="M13.5 3v5.5H19" />
+            <path d="M8.5 13h7M8.5 16.5h4.5" />
             </svg>
-                                </span>
-                                <h3 class="font-medium text-white">One process, every server</h3>
-                                <p class="text-sm/relaxed text-pretty text-plum-400">Leelabot dispatches to as many Urban Terror instances as you throw at it, each with its own configuration and its own set of plugins.</p>
-                            </div>
-                                                    <div class="flex flex-col gap-3 rounded-xl border border-white/8 bg-white/3 p-5 transition-colors hover:border-orchid-500/30 hover:bg-orchid-500/5">
-                                <span class="grid size-10 place-items-center rounded-lg border border-orchid-400/20 bg-orchid-500/10 text-orchid-300">
-                                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="3" width="8" height="8" rx="2" />
-            <rect x="13" y="3" width="8" height="8" rx="2" />
-            <rect x="3" y="13" width="8" height="8" rx="2" />
-            <path d="M17 13.5v7M13.5 17h7" />
+                                        <span class="font-mono text-sm text-plum-100">games.log</span>
+                                        <span class="ml-auto font-mono text-xs text-plum-500">server 1</span>
+                                    </li>
+                                                                    <li class="flex items-center gap-3 rounded-lg border border-white/10 bg-plum-900/60 px-3 py-2.5">
+                                        <svg class="size-4 shrink-0 text-plum-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M13.5 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5z" />
+            <path d="M13.5 3v5.5H19" />
+            <path d="M8.5 13h7M8.5 16.5h4.5" />
             </svg>
+                                        <span class="font-mono text-sm text-plum-100">games.log</span>
+                                        <span class="ml-auto font-mono text-xs text-plum-500">server 2</span>
+                                    </li>
+                                                                    <li class="flex items-center gap-3 rounded-lg border border-white/10 bg-plum-900/60 px-3 py-2.5">
+                                        <svg class="size-4 shrink-0 text-plum-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M13.5 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5z" />
+            <path d="M13.5 3v5.5H19" />
+            <path d="M8.5 13h7M8.5 16.5h4.5" />
+            </svg>
+                                        <span class="font-mono text-sm text-plum-100">games.log</span>
+                                        <span class="ml-auto font-mono text-xs text-plum-500">server 3</span>
+                                    </li>
+                                                            </ul>
+
+                            <p class="mt-5 text-sm/relaxed text-pretty text-plum-400">One games.log per server. Leelabot follows them all at once and turns every line into an event.</p>
+                        </div>
+
+                        <div class="flex items-center justify-center text-orchid-400/70 lg:px-4" aria-hidden="true">
+    <span class="flex flex-col items-center lg:hidden">
+        <span class="dot-rule-y h-8 w-px"></span>
+        <svg class="size-2.5" viewBox="0 0 10 10" fill="currentColor"><path d="M0 0h10L5 10z" /></svg>
+    </span>
+
+    <span class="hidden w-full items-center lg:flex">
+        <span class="dot-rule-x h-px flex-1"></span>
+        <svg class="size-2.5 shrink-0" viewBox="0 0 10 10" fill="currentColor"><path d="M0 0v10l10-5z" /></svg>
+    </span>
+</div>
+
+                        
+                        <div class="flex flex-col rounded-xl border border-orchid-400/25 bg-orchid-500/6 p-5">
+                            <p class="font-mono text-xs tracking-widest uppercase text-orchid-300">Dispatches</p>
+
+                            
+                                                        <div class="mt-5 flex flex-col items-center gap-2.5">
+                                <ul class="flex flex-wrap justify-center gap-2">
+                                                                            <li class="rounded-md border border-white/10 bg-plum-900/60 px-2.5 py-1 font-mono text-xs text-plum-300">adminbase</li>
+                                                                            <li class="rounded-md border border-white/10 bg-plum-900/60 px-2.5 py-1 font-mono text-xs text-plum-300">basicrights</li>
+                                                                            <li class="rounded-md border border-white/10 bg-plum-900/60 px-2.5 py-1 font-mono text-xs text-plum-300">stats</li>
+                                                                    </ul>
+
+                                <span class="dot-rule-y h-6 w-px text-orchid-400" aria-hidden="true"></span>
+
+                                <span class="rounded-lg border border-orchid-400/40 bg-plum-950/70 px-4 py-2.5">
+                                    <img src="/leelabot-logo.png" alt="Leelabot" width="92" height="48" class="h-7 w-auto">
                                 </span>
-                                <h3 class="font-medium text-white">Everything is a plugin</h3>
-                                <p class="text-sm/relaxed text-pretty text-plum-400">The core parses the server and fires events. Features live in plugins — drop a PHP file in plugins/, hook the events you care about, reload.</p>
+
+                                <span class="dot-rule-y h-6 w-px text-orchid-400" aria-hidden="true"></span>
+
+                                <ul class="flex flex-wrap justify-center gap-2">
+                                                                            <li class="rounded-md border border-white/10 bg-plum-900/60 px-2.5 py-1 font-mono text-xs text-plum-300">bans</li>
+                                                                            <li class="rounded-md border border-white/10 bg-plum-900/60 px-2.5 py-1 font-mono text-xs text-plum-300">warns</li>
+                                                                            <li class="rounded-md border border-white/10 bg-plum-900/60 px-2.5 py-1 font-mono text-xs text-plum-300">logs</li>
+                                                                    </ul>
                             </div>
-                                                    <div class="flex flex-col gap-3 rounded-xl border border-white/8 bg-white/3 p-5 transition-colors hover:border-orchid-500/30 hover:bg-orchid-500/5">
-                                <span class="grid size-10 place-items-center rounded-lg border border-orchid-400/20 bg-orchid-500/10 text-orchid-300">
-                                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+                            <p class="mt-5 text-sm/relaxed text-pretty text-plum-400">The core parses the server and fires events. Every feature is a plugin listening for the ones it cares about.</p>
+                        </div>
+
+                        <div class="flex items-center justify-center text-orchid-400/70 lg:px-4" aria-hidden="true">
+    <span class="flex flex-col items-center lg:hidden">
+        <span class="dot-rule-y h-8 w-px"></span>
+        <svg class="size-2.5" viewBox="0 0 10 10" fill="currentColor"><path d="M0 0h10L5 10z" /></svg>
+    </span>
+
+    <span class="hidden w-full items-center lg:flex">
+        <span class="dot-rule-x h-px flex-1"></span>
+        <svg class="size-2.5 shrink-0" viewBox="0 0 10 10" fill="currentColor"><path d="M0 0v10l10-5z" /></svg>
+    </span>
+</div>
+
+                        
+                        <div class="flex flex-col rounded-xl border border-white/10 bg-white/3 p-5">
+                            <p class="font-mono text-xs tracking-widest uppercase text-orchid-300">Answers</p>
+
+                            <ul class="mt-5 flex flex-col gap-2.5">
+                                                                    <li class="flex items-center gap-3 rounded-lg border border-white/10 bg-plum-900/60 px-3 py-2.5">
+                                        <svg class="size-4 shrink-0 text-plum-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 14a2 2 0 0 1-2 2H8.5L4.5 19.5V5a2 2 0 0 1 2-2H19a2 2 0 0 1 2 2z" />
             <path d="M8.5 8.5 10.5 10.5 8.5 12.5" />
             <path d="M13 12.5h4" />
             </svg>
-                                </span>
-                                <h3 class="font-medium text-white">RCon from the chat box</h3>
-                                <p class="text-sm/relaxed text-pretty text-plum-400">Change maps, force teams, veto votes, pause the round or slap someone, all typed straight into in-game chat instead of a console.</p>
-                            </div>
-                                                    <div class="flex flex-col gap-3 rounded-xl border border-white/8 bg-white/3 p-5 transition-colors hover:border-orchid-500/30 hover:bg-orchid-500/5">
-                                <span class="grid size-10 place-items-center rounded-lg border border-orchid-400/20 bg-orchid-500/10 text-orchid-300">
-                                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 21.5s7.5-3.75 7.5-9.5V5.25L12 2.5 4.5 5.25V12c0 5.75 7.5 9.5 7.5 9.5z" />
-            <path d="m9 11.75 2.25 2.25L15 10.25" />
-            </svg>
-                                </span>
-                                <h3 class="font-medium text-white">Moderation on autopilot</h3>
-                                <p class="text-sm/relaxed text-pretty text-plum-400">Warns fire automatically on teamkilling and insults, and kick the players who keep at it. Bans persist to disk and survive a restart.</p>
-                            </div>
-                                                    <div class="flex flex-col gap-3 rounded-xl border border-white/8 bg-white/3 p-5 transition-colors hover:border-orchid-500/30 hover:bg-orchid-500/5">
-                                <span class="grid size-10 place-items-center rounded-lg border border-orchid-400/20 bg-orchid-500/10 text-orchid-300">
-                                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M3.5 3.5v17h17" />
-            <rect x="7" y="12" width="3" height="5.5" rx="1" />
-            <rect x="12" y="8.5" width="3" height="9" rx="1" />
-            <rect x="17" y="5.5" width="3" height="12" rx="1" />
-            </svg>
-                                </span>
-                                <h3 class="font-medium text-white">Stats and awards</h3>
-                                <p class="text-sm/relaxed text-pretty text-plum-400">Per-player statistics tracked across the round, with end-of-game awards announced in chat. Players pull their own with !stats.</p>
-                            </div>
-                                                    <div class="flex flex-col gap-3 rounded-xl border border-white/8 bg-white/3 p-5 transition-colors hover:border-orchid-500/30 hover:bg-orchid-500/5">
-                                <span class="grid size-10 place-items-center rounded-lg border border-orchid-400/20 bg-orchid-500/10 text-orchid-300">
-                                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <span class="font-mono text-sm text-plum-100">RCon</span>
+                                        <span class="ml-auto text-xs text-plum-500">back into the game</span>
+                                    </li>
+                                                                    <li class="flex items-center gap-3 rounded-lg border border-white/10 bg-plum-900/60 px-3 py-2.5">
+                                        <svg class="size-4 shrink-0 text-plum-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="4.5" cy="12" r="2.5" />
             <circle cx="19.5" cy="12" r="2.5" />
             <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" />
             <path d="M7.2 12h2.6M14.2 12h2.6" />
             </svg>
-                                </span>
-                                <h3 class="font-medium text-white">Bridged to IRC and TeamSpeak</h3>
-                                <p class="text-sm/relaxed text-pretty text-plum-400">A full IRC bot relays the server chat to your channel, and the TeamSpeak plugin reports who is sitting in voice.</p>
-                            </div>
-                                            </div>
+                                        <span class="font-mono text-sm text-plum-100">IRC</span>
+                                        <span class="ml-auto text-xs text-plum-500">your channel</span>
+                                    </li>
+                                                                    <li class="flex items-center gap-3 rounded-lg border border-white/10 bg-plum-900/60 px-3 py-2.5">
+                                        <svg class="size-4 shrink-0 text-plum-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4.5 13v-1.5a7.5 7.5 0 0 1 15 0V13" />
+            <rect x="2.5" y="12.5" width="4" height="6.5" rx="2" />
+            <rect x="17.5" y="12.5" width="4" height="6.5" rx="2" />
+            </svg>
+                                        <span class="font-mono text-sm text-plum-100">TeamSpeak</span>
+                                        <span class="ml-auto text-xs text-plum-500">who&#039;s in voice</span>
+                                    </li>
+                                                            </ul>
+
+                            <p class="mt-5 text-sm/relaxed text-pretty text-plum-400">Replies go back to the players over RCon, and out to the channels your admins are already sitting in.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -406,40 +410,352 @@
                     <h2 class="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Commands, typed in game</h2>
                     <p class="mt-4 max-w-xl text-pretty text-plum-400">
                         Rights are per command and per admin level, so trusted regulars can call a vote
-                        without ever getting near your RCon password.
+                        without ever getting near your RCon password. Hover one to see what it does.
                     </p>
 
                     <ul class="mt-8 flex flex-wrap gap-2">
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!kick</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!ban</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!mute</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!slap</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!warn</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!clearwarns</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!map</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!cyclemap</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!nextmap</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!veto</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!pause</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!shuffleteams</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!swap</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!force</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!bigtext</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!say</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!stats</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!awards</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!setadmin</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!giverights</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!list</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!rcon</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!reload</li>
-                                                    <li class="rounded-md border border-white/8 bg-white/4 px-2.5 py-1 font-mono text-sm text-plum-300">!die</li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-0"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!kick</button>
+
+                                
+                                <span
+                                    id="command-0"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Kicks a player from the server.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-1"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!ban</button>
+
+                                
+                                <span
+                                    id="command-1"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Bans a player. The ban list is kept on disk and survives a restart.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-2"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!mute</button>
+
+                                
+                                <span
+                                    id="command-2"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Mutes a player in the server.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-3"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!slap</button>
+
+                                
+                                <span
+                                    id="command-3"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Slaps a player from the server.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-4"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!warn</button>
+
+                                
+                                <span
+                                    id="command-4"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Warns a player. Enough warnings and they get kicked automatically.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-5"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!clearwarns</button>
+
+                                
+                                <span
+                                    id="command-5"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Clears a player&#039;s accumulated warnings.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-6"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!map</button>
+
+                                
+                                <span
+                                    id="command-6"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Change the current map. Reloads the server.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-7"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!cyclemap</button>
+
+                                
+                                <span
+                                    id="command-7"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Go to the next map.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-8"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!nextmap</button>
+
+                                
+                                <span
+                                    id="command-8"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Change the map that comes next.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-9"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!veto</button>
+
+                                
+                                <span
+                                    id="command-9"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Cancel a vote in progress.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-10"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!pause</button>
+
+                                
+                                <span
+                                    id="command-10"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Pause the game.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-11"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!shuffleteams</button>
+
+                                
+                                <span
+                                    id="command-11"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Shuffle the teams, with a restart.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-12"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!swap</button>
+
+                                
+                                <span
+                                    id="command-12"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Swap the two teams.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-13"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!force</button>
+
+                                
+                                <span
+                                    id="command-13"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Force a player into a team.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-14"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!bigtext</button>
+
+                                
+                                <span
+                                    id="command-14"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Print a large message across everyone&#039;s screen.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-15"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!say</button>
+
+                                
+                                <span
+                                    id="command-15"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Send a message to everyone.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-16"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!stats</button>
+
+                                
+                                <span
+                                    id="command-16"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Kills, deaths and ratio for the round.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-17"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!awards</button>
+
+                                
+                                <span
+                                    id="command-17"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Announce the end-of-round awards.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-18"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!setadmin</button>
+
+                                
+                                <span
+                                    id="command-18"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Promote a player to an admin level.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-19"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!giverights</button>
+
+                                
+                                <span
+                                    id="command-19"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Give a player a specific level.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-20"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!list</button>
+
+                                
+                                <span
+                                    id="command-20"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >List the players on the server.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-21"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!rcon</button>
+
+                                
+                                <span
+                                    id="command-21"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Send an RCon command straight to the server.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-22"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!reload</button>
+
+                                
+                                <span
+                                    id="command-22"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Reload the game.</span>
+                            </li>
+                                                    <li class="group relative">
+                                <button
+                                    type="button"
+                                    aria-describedby="command-23"
+                                    class="cursor-help rounded-md border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm text-plum-200 transition-colors hover:border-orchid-400/50 hover:bg-orchid-500/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid-400"
+                                >!die</button>
+
+                                
+                                <span
+                                    id="command-23"
+                                    role="tooltip"
+                                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 hidden w-52 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg border border-white/12 bg-plum-850 px-3 py-2 text-xs/relaxed text-plum-200 shadow-xl shadow-black/60 group-hover:block group-focus-within:block"
+                                >Stop the bot.</span>
+                            </li>
                                             </ul>
                 </div>
             </section>
 
             
-            <section id="plugins" class="border-t border-white/5 bg-plum-950/40">
+            <section id="plugins" class="border-t border-white/5">
                 <div class="mx-auto max-w-6xl px-6 py-20">
                     <h2 class="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Plugins in the box</h2>
                     <p class="mt-4 max-w-xl text-pretty text-plum-400">
@@ -448,51 +764,51 @@
                     </p>
 
                     <dl class="mt-12 grid gap-x-10 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
-                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-500/25 pl-4">
+                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-400/30 pl-4">
                                 <dt class="font-mono text-sm text-orchid-300">adminbase</dt>
                                 <dd class="text-sm/relaxed text-pretty text-plum-400">Most of the admin commands: kicks, maps, votes, server control.</dd>
                             </div>
-                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-500/25 pl-4">
+                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-400/30 pl-4">
                                 <dt class="font-mono text-sm text-orchid-300">assault</dt>
                                 <dd class="text-sm/relaxed text-pretty text-plum-400">Helpers for the Assault gametype.</dd>
                             </div>
-                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-500/25 pl-4">
+                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-400/30 pl-4">
                                 <dt class="font-mono text-sm text-orchid-300">bans</dt>
                                 <dd class="text-sm/relaxed text-pretty text-plum-400">Ban players and keep the ban list on disk.</dd>
                             </div>
-                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-500/25 pl-4">
+                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-400/30 pl-4">
                                 <dt class="font-mono text-sm text-orchid-300">basicrights</dt>
                                 <dd class="text-sm/relaxed text-pretty text-plum-400">Simple rights management, built for ease of configuration.</dd>
                             </div>
-                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-500/25 pl-4">
+                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-400/30 pl-4">
                                 <dt class="font-mono text-sm text-orchid-300">clientbase</dt>
                                 <dd class="text-sm/relaxed text-pretty text-plum-400">Player-facing commands: !teams, !time, !nextmap, !help.</dd>
                             </div>
-                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-500/25 pl-4">
+                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-400/30 pl-4">
                                 <dt class="font-mono text-sm text-orchid-300">dummy</dt>
                                 <dd class="text-sm/relaxed text-pretty text-plum-400">A skeleton to copy when you start your own plugin.</dd>
                             </div>
-                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-500/25 pl-4">
+                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-400/30 pl-4">
                                 <dt class="font-mono text-sm text-orchid-300">irc</dt>
                                 <dd class="text-sm/relaxed text-pretty text-plum-400">A full IRC bot bridging server chat to a channel.</dd>
                             </div>
-                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-500/25 pl-4">
+                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-400/30 pl-4">
                                 <dt class="font-mono text-sm text-orchid-300">logs</dt>
                                 <dd class="text-sm/relaxed text-pretty text-plum-400">Logs all activity on each server separately.</dd>
                             </div>
-                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-500/25 pl-4">
+                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-400/30 pl-4">
                                 <dt class="font-mono text-sm text-orchid-300">messages</dt>
                                 <dd class="text-sm/relaxed text-pretty text-plum-400">Recurring announcements posted in chat on a timer.</dd>
                             </div>
-                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-500/25 pl-4">
+                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-400/30 pl-4">
                                 <dt class="font-mono text-sm text-orchid-300">stats</dt>
                                 <dd class="text-sm/relaxed text-pretty text-plum-400">Game statistics for every player, plus end-of-round awards.</dd>
                             </div>
-                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-500/25 pl-4">
+                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-400/30 pl-4">
                                 <dt class="font-mono text-sm text-orchid-300">teamspeak</dt>
                                 <dd class="text-sm/relaxed text-pretty text-plum-400">Reports who is currently on the TeamSpeak server.</dd>
                             </div>
-                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-500/25 pl-4">
+                                                    <div class="flex flex-col gap-1.5 border-l border-orchid-400/30 pl-4">
                                 <dt class="font-mono text-sm text-orchid-300">warns</dt>
                                 <dd class="text-sm/relaxed text-pretty text-plum-400">Auto-warns teamkilling and insults, kicks repeat offenders.</dd>
                             </div>
@@ -526,11 +842,11 @@
                                                     </dl>
                     </div>
 
-                    <div class="min-w-0 overflow-x-auto rounded-xl border border-white/8 bg-plum-950/70 p-5 font-mono text-[13px]/relaxed text-plum-300 shadow-xl shadow-black/40">
-                        <p class="whitespace-nowrap"><span class="text-orchid-400">$</span> git clone https://github.com/ylorant/Leelabot.git</p>
-                        <p class="whitespace-nowrap"><span class="text-orchid-400">$</span> cd Leelabot</p>
+                    <div class="min-w-0 overflow-x-auto rounded-xl border border-white/10 bg-plum-900/70 p-5 font-mono text-[13px]/relaxed text-plum-200 shadow-xl shadow-black/40">
+                        <p class="whitespace-nowrap"><span class="text-orchid-300">$</span> git clone https://github.com/ylorant/Leelabot.git</p>
+                        <p class="whitespace-nowrap"><span class="text-orchid-300">$</span> cd Leelabot</p>
                         <p class="mt-3 whitespace-nowrap text-plum-500"># edit the config, then:</p>
-                        <p class="whitespace-nowrap"><span class="text-orchid-400">$</span> php bot.php</p>
+                        <p class="whitespace-nowrap"><span class="text-orchid-300">$</span> php bot.php</p>
                     </div>
                 </div>
             </section>
