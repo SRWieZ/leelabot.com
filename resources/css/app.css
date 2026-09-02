@@ -46,6 +46,10 @@
     --color-hud-red: #7d120e;
     --color-hud-red-bar: #900100;
 
+    /* The alive/dead markers are drawn in flat primaries in game. */
+    --color-hud-blue-mark: #0000ff;
+    --color-hud-red-mark: #ff0000;
+
     /* Urban Terror's two sides. Reserved for team semantics, nothing else. */
     --color-team-blue: oklch(0.620 0.180 253);
     --color-team-blue-bright: oklch(0.735 0.150 250);

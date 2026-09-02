@@ -8,6 +8,10 @@
     $barClass = $isBlue ? 'bg-hud-blue-bar' : 'bg-hud-red-bar';
     $rowClass = $isBlue ? 'bg-hud-blue' : 'bg-hud-red';
 
+    // Alive: flat team colour boxed in black. Dead: the same box, hollow.
+    $aliveMark = $isBlue ? 'border-black bg-hud-blue-mark' : 'border-black bg-hud-red-mark';
+    $deadMark = $isBlue ? 'border-hud-blue-mark' : 'border-hud-red-mark';
+
     $score = array_sum(array_column($players, 'kills'));
 @endphp
 
@@ -21,7 +25,7 @@
     <ul class="flex flex-col gap-px">
         @foreach ($players as $player)
             <li class="flex items-center gap-2 px-2 py-1 font-mono text-xs {{ $rowClass }} {{ $player['alive'] ? 'text-white' : 'text-white/45' }}">
-                <span class="size-1.5 shrink-0 {{ $player['alive'] ? 'bg-white' : 'bg-white/30' }}"></span>
+                <span class="size-2.5 shrink-0 border {{ $player['alive'] ? $aliveMark : $deadMark }}"></span>
                 <span class="tabular-nums">{{ $player['kills'] }}:{{ $player['deaths'] }}</span>
                 <span class="truncate">{{ $player['name'] }}</span>
             </li>
