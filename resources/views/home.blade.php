@@ -25,7 +25,7 @@
 
         <header class="sticky top-0 z-40 border-b border-zinc-200/80 bg-white/85 backdrop-blur-sm dark:border-zinc-800/80 dark:bg-zinc-950/85">
             <div class="mx-auto flex max-w-5xl items-center gap-6 px-6 py-4">
-                <a href="#content" class="flex items-center gap-2.5 font-semibold tracking-tight text-zinc-900 dark:text-white">
+                <a href="/" class="flex items-center gap-2.5 font-semibold tracking-tight text-zinc-900 dark:text-white">
                     <x-mark class="size-7 text-ember-600 dark:text-ember-500" />
                     Leelabot
                 </a>
